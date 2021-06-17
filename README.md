@@ -27,5 +27,18 @@ docker build -t nali .
 docker run -it --rm nali nali-ping baidu.com
 ```
 
+快捷化
+```
+创建脚本/usr/local/bin/nali
+#!/bin/bash
+docker run -i --rm nali nali $@
+加执行
+chmod +x /usr/local/bin/nali
 
+然后你可以将任何命令得输出管道至nali
+#w | nali
+#ping baidu.com | nali
 
+```
+
+Have Fun!
